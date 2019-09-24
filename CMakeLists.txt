@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.5)
+include_directories(SYSTEM ./src/include/eigen-eigen-323c052e1731)
+set (CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_FLAGS "-O2 -pg")
+add_executable(BPCA src/BPCA.cpp src/VariationalInferencerOfBPCA.cpp)
+TARGET_LINK_LIBRARIES(BPCA boost_program_options)
